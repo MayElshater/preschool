@@ -16,8 +16,11 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('subject');
+            $table->string('image');
+            $table->boolean('published');
             $table->string('phone');
             $table->string('email')->unique();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class PreschoolController extends Controller
 {
     //
-    public function home(){
+    public function home1(){
         $title = "Home";
-        return view('home', compact('title'));
+        return view('home1', compact('title'));
     }
     public function team(){
         $title = "Teachers";
@@ -46,5 +49,24 @@ class PreschoolController extends Controller
     public function testimonial(){
         $title = "Testimonial";
         return view('testimonial', compact('title'));
+    }/*
+    public function children()
+    {
+        $title ="Children";
+        return view('admin.childrenTable', compact('title'));
+    }*/
+    public function teachers()
+    {   
+        $title ="Teachers";
+        return view('admin.teachersTable', compact('title'));
     }
+    public function class()
+    {   
+        $title ="Classes";
+        return view('admin.classesTable', compact('title'));
+    }
+
+    
+   
+   
 }

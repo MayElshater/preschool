@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('grade');
             $table->foreignId('parent_id')->constrained('parents')->onDelete('restrict');
             $table->foreignId('class_id')->constrained('classes')->onDelete('restrict');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

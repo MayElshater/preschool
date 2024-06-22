@@ -7,7 +7,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto">
-            <a href="{{ route('home') }}" class="nav-item nav-link {{ Route::is('home') ? 'active' : '' }}">Home</a>
+            <a href="{{ route('home1') }}" class="nav-item nav-link {{ Route::is('home1') ? 'active' : '' }}">Home</a>
             <a href="{{ route('about') }}" class="nav-item nav-link {{ Route::is('about') ? 'active' : '' }}">About Us</a>
             <a href="{{ route('classes') }}" class="nav-item nav-link {{ Route::is('classes') ? 'active' : '' }}">Classes</a>
             <div class="nav-item dropdown">
