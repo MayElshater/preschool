@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class ContactUS extends Model
+{
+    use HasFactory;
+    protected $table = 'contactUs';
+    protected $fillable = ['name', 'message', 'email', 'subject' ];
+    
+}

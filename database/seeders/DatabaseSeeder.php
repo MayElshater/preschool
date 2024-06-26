@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         $children = Child::factory(20)->create();
         $teachers = Teacher::factory(20)->create();
         $parents = Parents::factory(20)->create();
-        $classes = Classes::factory(20)->create();
+        $classes = Classes::factory(6)->create();
 
         // Attach children to teachers (many-to-many relationship)
         $teachers->each(function ($teacher) use ($children) {
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
         // Attach teachers to classes (many-to-many relationship)
         $teachers->each(function ($teacher) use ($classes) {
             $teacher->classes()->attach(
-                $classes->random(rand(1, 10))->pluck('id')->toArray()
+                $classes->random(rand(1, 6))->pluck('id')->toArray()
             );
         });
 

@@ -7,6 +7,11 @@ use App\Http\Controllers\ChildController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactUsController;
+
+
+Route::get('contactus', [ContactUSController::class, 'contactUS'])->name('contactus');
+Route::post('contact-us', [ContactUSController::class, 'contactUSPost'])->name('contactus.store');
 
 /*Route::get('/', function () {
     return view('welcome');

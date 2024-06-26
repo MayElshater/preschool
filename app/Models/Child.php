@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+
 use App\Models\Classes;
 use App\Models\Parents;
 
 class Child extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
     protected $fillable = ['first_name', 'last_name', 'date_of_birth', 'grade' ,'parent_id', 'class_id'];
 
     public function parent()

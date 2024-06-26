@@ -19,11 +19,11 @@ class TeacherFactory extends Factory
     public function definition(): array
     {
        // Get all image files from the specified directory
-       $imagePath = public_path('images/teachers');
-       $imageFiles = File::files($imagePath);
+       //$imagePath = public_path('images/teachers');
+      // $imageFiles = File::files($imagePath);
 
        // Pick a random image file
-       $randomImage = $this->faker->randomElement($imageFiles);
+       //$randomImage = $this->faker->randomElement($imageFiles);
 
        return [
            'first_name' => $this->faker->firstName,
